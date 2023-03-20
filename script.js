@@ -27,3 +27,10 @@ for(let i=0; i<btnsOpenModal.length; i++) {
     // Close modal click with overlay
     overlay.addEventListener('click', closeModal);
 }
+
+// Close modal with Ese key press
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
